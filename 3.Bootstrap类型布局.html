@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- 引入 Bootstrap 的样式文件 -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--IE9及其以下浏览器 支持<header>等新增的语义化元素-->
+    <!--让IE8及其及其以下浏览器 支持 @media -->
+</head>
+<style type="text/css">
+    html{
+        font-size:10px;
+    }
+    .navbar-wrapper{
+        background-color: #fff;
+
+        /*width:100%;*/
+    }
+    .navbar-default{
+        background-color: #fff;
+        border:none;
+        margin-bottom:0;
+    }
+    #chinaBootstrap{
+        margin-left:10rem;
+    }
+    .navbar-nav li:hover{
+        background-color: #f9f9f9;
+    }
+    .jumbotron{
+        background-color: #6f5499;
+    }
+    @media screen and (max-width:991px){
+        #chinaBootstrap{
+            margin-left:0;
+        }
+    }
+    @media screen and (max-width:991px) and (min-width:768px){
+        .navbar-default{
+            min-width: 991px;
+        }
+        /*.container{*/
+            /*width:auto;*/
+        /*}*/
+    }
+
+</style>
+<body>
+    <div class="container">
+        <!---------------------导航条start----------------->
+        <div class="navbar navbar-default ">
+            <!--导航条头部start-->
+            <div class="navbar-header">
+                <!--导航条隐藏按钮-->
+                <button type="button" class="navbar-toggle"
+                        data-toggle="collapse" data-target="#myNav"
+                >
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Bootstrap</a>
+                <!--导航条隐藏按钮end-->
+            </div>
+            <!--导航条头部end-->
+            <!--导航条选项start-->
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="nav navbar-nav">
+                    <li><a href="item1">起步</a></li>
+                    <li><a href="item2">全局CSS样式</a></li>
+                    <li><a href="item3">组件</a></li>
+                    <li><a href="item4">JavaScript插件</a></li>
+                    <li><a href="item5">定制</a></li>
+                    <li><a href="item6">网站实例</a></li>
+                    <li id="chinaBootstrap"><a href="item6">Bootstrap中文网</a></li>
+                </ul>
+            </div>
+            <!--导航条选项end-->
+        </div>
+        <!---------------------导航条End------------------->
+    </div>
+    <div class="jumbotron">
+        
+    </div>
+
+    <!-- 引入jQuery 插件 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!--引入bootstrap的JS文件-->
+<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

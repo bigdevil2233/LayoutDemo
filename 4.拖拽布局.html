@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- 引入 Bootstrap 的样式文件 -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--IE9及其以下浏览器 支持<header>等新增的语义化元素-->
+    <!--让IE8及其及其以下浏览器 支持 @media -->
+</head>
+<style type="text/css">
+    .box1{
+        width: 80px;
+        height: 80px;
+        background-color: orange;
+        margin:5px auto;
+    }
+    .mug1{
+        width: 300px;
+        height: 300px;
+        background-color: #0f88eb;
+        position:absolute;
+        top:300px;
+    }
+    .mug2{
+        width: 300px;
+        height: 300px;
+        background-color: #2b542c;
+        position: absolute;
+        right:0;
+    }
+</style>
+<body>
+
+<div class="box1" draggable="true"></div>
+<div class="mug1"></div>
+<div class="mug2"></div>
+
+<script type="text/javascript">
+    window.onload=function(){
+        var dragDom=document.querySelector(".box1");
+        var dropDom1=document.querySelector(".mug1");
+        var dropDom2=document.querySelector(".mug2");
+        var dragedDom;
+        document.body.ondragstart=function(ev){
+            console.log(ev.target);
+            dragedDom=ev.target;
+        }
+
+        dropDom1.ondragover=function(ev){
+            ev.preventDefault();
+        }
+
+        dropDom1.ondrop=function(ev){
+            console.log(ev);
+            ev.preventDefault();
+//            在这里dragedDom不加上.cloneNode()，即可实现拖拽后消除原位置的元素
+            dropDom1.appendChild(dragedDom);
+
+        }
+        dropDom2.ondragover=function(ev){
+            ev.preventDefault();
+        }
+        dropDom2.ondrop=function(ev){
+            console.log(ev);
+            ev.preventDefault();
+            dropDom2.appendChild(dragedDom);
+        }
+
+
+
+    }
+</script>
+
+
+<!-- 引入jQuery 插件 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!--引入bootstrap的JS文件-->
+<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
